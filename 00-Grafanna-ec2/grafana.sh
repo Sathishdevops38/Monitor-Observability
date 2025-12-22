@@ -12,5 +12,6 @@ sudo yum -y install terraform
 #install Grafana
 cp repo /etc/yum.repos.d/grafana.repo
 sudo dnf install grafana -y
+sudo systemctl daemon-reload
 sudo systemctl start grafana-server
 sudo systemctl enable grafana-server
