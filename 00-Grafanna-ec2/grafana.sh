@@ -10,9 +10,9 @@ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashi
 sudo yum -y install terraform
 
 #install Grafana
-cp repo /etc/yum.repos.d/grafana.repo
+sudo cp ./repo /etc/yum.repos.d/grafana.repo
 sudo dnf update -y
-sudo dnf install grafana -y
+sudo dnf install grafana.x86_64 -y
 sudo systemctl daemon-reload
 sudo systemctl start grafana-server
 sudo systemctl enable grafana-server
