@@ -12,6 +12,13 @@ variable "grafana_tags"{
     }
 }
 
+variable "prometheus_tags"{
+    default ={
+        createdby = "terraform"
+        usage =  "monitor"
+    }
+}
+
 variable "instance_type"{
     default = "t3.micro"
 }
