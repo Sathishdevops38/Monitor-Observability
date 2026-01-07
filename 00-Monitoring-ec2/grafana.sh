@@ -10,9 +10,6 @@ xfs_growfs /home
 # sudo yum -y install terraform
 
 #install Grafana
-sudo cp ./grafana.repo /etc/yum.repos.d/grafana.repo
-sudo dnf update -y
-sudo dnf install grafana.x86_64 -y
-sudo systemctl daemon-reload
+sudo yum install -y https://dl.grafana.com/grafana/release/12.3.1/grafana_12.3.1_20271043721_linux_amd64.rpm
 sudo systemctl start grafana-server
 sudo systemctl enable grafana-server
